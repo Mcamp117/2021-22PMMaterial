@@ -35,6 +35,7 @@ caption{
 tr:nth-of-type(even){
      background: #d8e8e9;
 }
+
 @media(min-width:1024px){
      form{
           width: 60%;
