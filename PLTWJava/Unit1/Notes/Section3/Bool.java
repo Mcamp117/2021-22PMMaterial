@@ -14,7 +14,7 @@ public class Bool {
 
         boolean z;
 
-        a=true;
+        boolean a=true;
         
 
         /* relational operator 
