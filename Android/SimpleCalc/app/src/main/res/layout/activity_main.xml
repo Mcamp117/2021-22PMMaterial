@@ -55,6 +55,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginBottom="316dp"
         android:text="+"
+        android:onClick="adding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -65,6 +66,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="316dp"
         android:text="-"
+        android:onClick="subtracting"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/multBTN" />
 
@@ -96,7 +98,7 @@
         android:layout_marginStart="167dp"
         android:layout_marginEnd="167dp"
         android:layout_marginBottom="195dp"
-        android:text="@string/output"
+        android:text="output"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
