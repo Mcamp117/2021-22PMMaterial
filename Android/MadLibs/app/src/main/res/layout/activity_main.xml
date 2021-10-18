@@ -74,7 +74,7 @@
         tools:layout_editor_absoluteY="180dp" />
 
     <EditText
-        android:id="@+id/PluralNoun2"
+        android:id="@+id/PluralNoun1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -102,7 +102,7 @@
         tools:layout_editor_absoluteY="270dp" />
 
     <EditText
-        android:id="@+id/PluralNoun3"
+        android:id="@+id/PluralNoun2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -116,7 +116,7 @@
         tools:layout_editor_absoluteY="315dp" />
 
     <EditText
-        android:id="@+id/adjective3"
+        android:id="@+id/Adjective3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -130,7 +130,7 @@
         tools:layout_editor_absoluteY="360dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/generateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="157dp"
@@ -141,6 +141,7 @@
         tools:layout_editor_absoluteY="437dp" />
 
     <TextView
+        android:id="@+id/outputView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Output"
