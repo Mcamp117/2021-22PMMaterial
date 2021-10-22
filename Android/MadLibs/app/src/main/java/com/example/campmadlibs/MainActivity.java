@@ -49,6 +49,6 @@ public class MainActivity extends AppCompatActivity {
         String noun1 = String.valueOf(nTXT.getText());
         String pluralNoun2 = String.valueOf(pn2TXT.getText());
         String adjective3 = String.valueOf(a3TXT.getText());
-        output.setText(String.format("One Day while at the office"+person1+", a "+adjective1+"salesman, stumbled upon a package of"+adjective2+"beans. He then gave them to"+person2+" who then put them in"+pluralNoun1+",when they added water they turned into"+noun1+". He then put them into {} which were very {} and took them home. ));
+        output.setText(String.format("One Day while at the office "+person1+", a "+adjective1+" salesman, stumbled upon a package of "+adjective2+" beans. He then gave them to "+person2+" who then put them in "+pluralNoun1+", when they added water they turned into "+noun1+".He then put them into "+pluralNoun2+" which were very "+adjective3+" and took them home."));
     }
 }
