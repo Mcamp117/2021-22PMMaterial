@@ -15,5 +15,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstUI" />
+
+    <EditText
+        android:id="@+id/firstUI"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="211dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="213dp"
+        android:ems="10"
+        android:hint="enter some info"
+        android:padding="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/firstBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
