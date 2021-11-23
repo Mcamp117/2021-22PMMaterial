@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 import javax.print.DocFlavor.STRING;
-
+import java.lang.System;
 import java.util.ArrayList;
 import java.util.Random;
 public class passwordManager{
@@ -9,7 +9,7 @@ public class passwordManager{
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
         
-        ArrayList <Boolean> reqCheckList = new ArrayList<Boolean>();
+        boolean[] reqCheckList = {false,false,false,false};
         ArrayList <Integer> specialCharacters = new ArrayList<Integer>();
         ArrayList <String> passwordList = new ArrayList<String>();
 
@@ -18,7 +18,8 @@ public class passwordManager{
         ArrayList <String> lastName = new ArrayList<String>();
         ArrayList <String> username = new ArrayList<String>();
         ArrayList <String> passwords = new ArrayList<String>();
-        int loginTries = 5;
+        
+        
 
         ArrayList <String> category = new ArrayList<String>();
         category.add("home");
@@ -26,8 +27,11 @@ public class passwordManager{
         category.add("entertainment");
         category.add("bills");
 
-        randomizer();
+        //randomizer();
         newUser(username, passwords, firstName, lastName);
+        System.out.print(username);
+        System.out.print(passwords);
+        login(username,passwords,loginTries);
     }
 
     private static void randomizer() {
@@ -72,25 +76,28 @@ public class passwordManager{
         // ui.addAll(1, password);
     }
 
-    private void passwordChecker(){
+    private void passwordChecker(boolean[] cl,String p){
+        char[] password = p.toCharArray();
         if (passwords.length()>=8) {
-            reqCheckList[0]=true;
-            for(int i=1; i<passwords.length(); i++){
+            cl[0]=true;
+            for(int i=0; i<passwords.length(); i++){
                 if(passwords.contains(lowerAlphabet)){
-                    reqCheckList[1]=true;
+                    cl[1]=true;
                 }
                 else if(passwords.contains(upperAlphabet)){
-                    reqCheckList[2]=true;
+                    cl[2]=true;
                 }
                 else if(passwords.contains(symbols)){
-                    reqCheckList[3]=true;
+                    cl[3]=true;
                 }
                 else if(passwords.contains(numbers)){
-                    reqCheckList[4]=true;
+                    cl[4]=true;
                 }
             }
-            if(reqCheckList.contains(false)){
-
+            for(boolean value: cl){
+                if(value==false){
+                    
+                }
             } 
         }
     }
@@ -137,13 +144,33 @@ public class passwordManager{
         String userPassword = newUser.nextLine();
         p.add(userPassword);
     }
-    private static void login(ArrayList <String> u, ArrayList <String> p ){
+    private static void login(ArrayList <String> u, ArrayList <String> p){
         Scanner login = new Scanner(System.in);
-        System.out.println("Input your username ");
-        String username=login.nextLine();
-        System.out.println("Input your password");
-        String password=login.nextLine();
-        if( p.contains(password)&&(u.contains(username))){}
+        boolean loginChecker=false;
+        int loginTries = 5;
+        while(loginTries!=0){
+            System.out.println("Input your username ");
+            String username=login.nextLine();
+            System.out.println("Input your password");
+            String password=login.nextLine();
+            if( p.contains(password)&&(u.contains(username))){
+                loginTries=0;
+                int pindex=p.indexOf(password);
+                int uindex=u.indexOf(username);
+                if(pindex==uindex){
+                    System.out.println("Login Succesful");
+                    break;
+                }
+            }
+            else{
+                System.out.println("Incorrect Information, Try Again");
+                loginTries-=1;
+            }
+        }
+        if(loginTries==0){
+            System.out.println("0 tries remaining, we are calling the police");
+            System.exit(0);
+        }
 
     }
 
