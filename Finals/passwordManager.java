@@ -76,7 +76,7 @@ public class passwordManager{
         // ui.addAll(1, password);
     }
 
-    private void passwordChecker(boolean[] cl,String p){
+    private static void passwordChecker(boolean[] cl,String p){
         char[] password = p.toCharArray();
         if (passwords.length()>=8) {
             cl[0]=true;
