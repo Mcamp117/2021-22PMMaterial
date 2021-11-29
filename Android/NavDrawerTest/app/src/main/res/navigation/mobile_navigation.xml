@@ -23,8 +23,14 @@
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
-        android:id="@+id/nav_dice"
-        android:name="com.example.navdrawertest.ui.dice.DiceFragment"
-        android:label="Dice"
+        android:id="@+id/nav_dice6"
+        android:name="com.example.navdrawertest.ui.dice.Dice6Fragment"
+        android:label="Dice6"
         tools:layout="@layout/fragment_dice" />
+    <fragment
+        android:id="@+id/nav_dice4"
+        android:name="com.example.navdrawertest.ui.dice4.Dice4Fragment"
+        android:label="Dice4"
+        tools:layout="@layout/fragment_dice4" />
+
 </navigation>
