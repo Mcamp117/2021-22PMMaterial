@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/mainMenu">
 
     <fragment
         android:id="@+id/nav_home"
@@ -22,4 +22,9 @@
         android:name="com.example.scimadguesser.ui.slideshow.SlideshowFragment"
         android:label="Number Guesser"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.example.scimadguesser.ui.mainmenu.MenuFragment"
+        android:label="Main Menu"
+        tools:layout="@layout/fragment_main_menu" />
 </navigation>

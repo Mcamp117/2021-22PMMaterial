@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.scimadguesser.R;
-import com.example.scimadguesser.databinding.FragmentHomeBinding;
+
 
 public class HomeFragment extends Fragment {
     EditText firstNameTXT;
@@ -67,7 +67,7 @@ public class HomeFragment extends Fragment {
         String sciFiFirst = first.substring(0,rF)+last.substring(rL);
         String sciFiLast = city.substring(0,rC)+school.substring(rS);
         String sciFiHome = bro.substring(rB)+sis.substring(0,rSi);
-        output.setText(String.format("Welcome!"+sciFiFirst+" "+sciFiLast+" from "+sciFiHome));
+        output.setText(String.format("Welcome! "+sciFiFirst+" "+sciFiLast+" from "+sciFiHome));
     }
 
 }
