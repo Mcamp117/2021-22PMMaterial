@@ -1,5 +1,6 @@
 package com.example.scimadguesser.ui.home;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -16,6 +18,7 @@ import com.example.scimadguesser.R;
 
 
 public class HomeFragment extends Fragment {
+    ConstraintLayout screen;
     EditText firstNameTXT;
     EditText lastNameTXT;
     EditText cityTXT;
@@ -30,6 +33,7 @@ public class HomeFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView=inflater.inflate(R.layout.fragment_home,container,false);
 
+        screen = rootView.findViewById(R.id.constraintLayout);
         firstNameTXT=rootView.findViewById(R.id.firstTXT);
         lastNameTXT=rootView.findViewById(R.id.lastTXT);
         cityTXT=rootView.findViewById(R.id.cityTXT);
@@ -38,6 +42,7 @@ public class HomeFragment extends Fragment {
         sisTXT=rootView.findViewById(R.id.sisTXT);
         output=rootView.findViewById(R.id.output);
         generatorBTN=rootView.findViewById(R.id.generator);
+        screen.setBackgroundColor(Color.rgb(108, 150, 141));
         generatorBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

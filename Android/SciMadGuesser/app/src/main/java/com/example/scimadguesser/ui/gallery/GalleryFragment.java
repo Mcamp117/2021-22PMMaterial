@@ -1,5 +1,6 @@
 package com.example.scimadguesser.ui.gallery;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -16,6 +18,7 @@ import com.example.scimadguesser.R;
 
 
 public class GalleryFragment extends Fragment {
+    ConstraintLayout screen;
     EditText p1TXT;
     EditText a1TXT;
     EditText a2TXT;
@@ -31,6 +34,7 @@ public class GalleryFragment extends Fragment {
             ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_gallery, container, false);
+        screen = rootView.findViewById(R.id.constraintLayout);
         p1TXT = rootView.findViewById(R.id.PersonName1);
         a1TXT = rootView.findViewById(R.id.Adjective1);
         a2TXT = rootView.findViewById(R.id.Adjective2);
@@ -41,6 +45,7 @@ public class GalleryFragment extends Fragment {
         a3TXT = rootView.findViewById(R.id.Adjective3);
         output = rootView.findViewById(R.id.outputView);
         generator = rootView.findViewById(R.id.generateButton);
+        screen.setBackgroundColor(Color.rgb(242, 95, 22));
         generator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
