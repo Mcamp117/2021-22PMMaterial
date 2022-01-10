@@ -33,6 +33,12 @@ public class Zoo
                 case "visit cages" : 
                 msg = visitCages(animals);
                 break;
+                case "look down":
+                msg = lookDown(animals);
+                break;
+                case "look up":
+                msg = lookUp(animals);
+                break;
                 default : msg = "You flail helplessly with indecision.";
             }
             System.out.println("\n" + msg);
@@ -56,6 +62,26 @@ public class Zoo
      * This prints an ellipses with 1 second between each period
      * It then moves to the next line.
      */
+    public static String lookDown(List<Animal> animals){
+        String msg="";
+        for (Animal a: animals){
+            if (a instanceof Swimming){
+                Swimming f = (Swimming)a;
+                msg+=a.getName()+": \n\t"+f.swim()+"\n";
+            }
+        }
+        return msg;
+    }
+    public static String lookUp(List<Animal> animals){
+        String msg="";
+        for (Animal a: animals){
+            if (a instanceof Flying){
+                Flying f = (Flying)a;
+                msg+=a.getName()+": \n\t"+f.fly()+"\n";
+            }
+        }
+        return msg;
+    }
     public static void delayDots(int dotAmount) throws InterruptedException 
     {
         for (int i=0; i<dotAmount; i++) {
@@ -88,5 +114,7 @@ public class Zoo
        animals.add(new Yellow()); 
        animals.add(new White()); 
        animals.add(new Black()); 
+       animals.add(new Whale());
+       animals.add(new Anglerfish());
     }
 }
