@@ -1,5 +1,3 @@
-import javax.swing.plaf.basic.BasicTreeUI.TreeToggleAction;
-
 public class TrashPanda extends Bear implements Swimming{
     public TrashPanda(){
         super("TrashPanda","Stinky...");

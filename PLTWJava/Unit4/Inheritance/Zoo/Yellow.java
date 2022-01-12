@@ -1,5 +1,3 @@
-import java.nio.file.WatchEvent;
-
 public class Yellow extends Bird implements Flying,Swimming{
     public Yellow(){
         super("Yellow","zoom");

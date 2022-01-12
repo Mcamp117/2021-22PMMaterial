@@ -39,6 +39,12 @@ public class Zoo
                 case "look up":
                 msg = lookUp(animals);
                 break;
+                case "listen":
+                msg = listen(animals);
+                break;
+                case "look at bears":
+                msg = bearLook(animals);
+                break;
                 default : msg = "You flail helplessly with indecision.";
             }
             System.out.println("\n" + msg);
@@ -78,6 +84,23 @@ public class Zoo
             if (a instanceof Flying){
                 Flying f = (Flying)a;
                 msg+=a.getName()+": \n\t"+f.fly()+"\n";
+            }
+        }
+        return msg;
+    }
+    public static String listen(List<Animal> animals){
+        String msg="";
+        for (Animal a:animals){
+            msg+=a.getName()+":"+a.makeNoise()+"\n";
+        }
+        return msg;
+    }
+    public static String bearLook(List<Animal> animals){
+        String msg="";
+        for (Animal a: animals){
+            if (a instanceof Bear){
+                    Bear b=(Bear)a;
+                    msg+=b.getName()+": \n\t"+b.walk()+"\n";
             }
         }
         return msg;

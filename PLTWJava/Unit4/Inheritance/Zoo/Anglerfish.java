@@ -8,4 +8,8 @@ public class Anglerfish extends Fish implements Swimming{
     public String swim(){
         return "Swim towards the light";
     }
+    @Override
+    public String makeNoise(){
+        return "beep";
+    }
 }

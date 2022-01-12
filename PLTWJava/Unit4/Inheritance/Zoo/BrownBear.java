@@ -8,4 +8,8 @@ public class BrownBear extends Bear implements Swimming{
     public String swim(){
         return "Get da fish";
     }
+    @Override
+    public String walk(){
+        return("Going to hunt a girl who ate his poridge");
+    }
 }

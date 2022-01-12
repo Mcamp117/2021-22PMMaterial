@@ -1,5 +1,3 @@
-import java.security.KeyStore.PrivateKeyEntry;
-
 public abstract class Animal{
     private String name;
     private String desc;
@@ -14,6 +12,6 @@ public abstract class Animal{
     public String getDesc(){
         return desc;
     }
-    //public abstract String makeNoise();
+    public abstract String makeNoise();
     //like the onCreate
 }

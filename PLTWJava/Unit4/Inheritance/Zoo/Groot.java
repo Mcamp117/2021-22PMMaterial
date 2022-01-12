@@ -8,4 +8,8 @@ public class Groot extends SpaceAnimals{
     public String swim(){
         return "I am Groot";
     }
+    @Override
+    public String makeNoise(){
+        return "I am Groot";
+    }
 }
